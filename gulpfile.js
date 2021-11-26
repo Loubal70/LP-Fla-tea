@@ -13,10 +13,10 @@ const bundleSass = async () => {
   return src('./assets/scss/style.scss')
   // return src('./assets/scss/**/*.scss')
           .pipe(compileSass().on('error', compileSass.logError))
-          .pipe(autoprefixer({
-            cascade: false
-          }))
-          // .pipe(minifyCss())
+          // .pipe(autoprefixer({
+          //   cascade: false
+          // }))
+          .pipe(minifyCss())
           .pipe(sourceMaps.write())
           .pipe(concat('style.css'))
           .pipe(dest('./assets/css/'));
