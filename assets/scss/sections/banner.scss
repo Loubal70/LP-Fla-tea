@@ -1,0 +1,87 @@
+// Section Banner
+.banner{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: $black;
+    background: $beige_clairr;
+    padding: 65px;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &::before{
+        position: absolute;
+        top: 25%;
+        left: 13%;
+        display: block;
+        content: '';
+        background: $beige_clair;
+        width: 205px;
+        height: 205px;
+        border-radius: 50%;
+        visibility: hidden;
+        transform:  translate(var(--bannerBubbleX), var(--bannerBubbleY));
+
+        @media (min-width: map-get($grid-breakpoints, lg)) {
+            visibility: initial;
+        }
+    }
+
+    &__title{
+        font-size: 3rem;
+        max-width: 100%;
+        pointer-events: none;
+        padding-bottom: 20px;
+        border-bottom: 3px solid $beige_fonce;
+        z-index: 1;
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+            font-size: 4rem;
+            line-height: 70px;
+            max-width: 45%;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xxl)) {
+            max-width: 25%;
+        }
+
+        @media (min-width: 1600px) {
+            max-width: 21%;
+        }
+
+
+        span{
+            color: $beige_fonce;
+        }
+    }
+
+    img:not(.banner__mouse){
+        max-width: 100%;
+        
+    
+        @media (min-width: map-get($grid-breakpoints, xxl)) {
+            flex-basis: 45%;
+        }
+    }
+
+    &__mouse{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: 1.5s infinite reverse slidein;
+        display: none;
+
+        @media (min-width: map-get($grid-breakpoints, xxl)) {
+            display: block;
+        }
+    }
+  
+}

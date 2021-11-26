@@ -1,0 +1,170 @@
+.menu {
+    background: $beige_clair;
+    position: relative;
+    z-index: 1;
+
+    &__navigation{
+        // padding: 45px 15px;
+        // max-width: 1170px;
+        // margin: auto;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height .5s ease;
+
+        @media ( min-width: map-get($grid-breakpoints, xl) ) {
+            padding: 45px 15px;
+            overflow: auto;
+            max-height: unset
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+
+            @media ( min-width: map-get($grid-breakpoints, xl) ) {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                // content: '';
+            }
+
+            a {
+                display: block;
+                height: 80px;
+
+                img{
+                    width: 80px;
+                    height: 80px;
+                    
+                    background: $beige_clair;
+                    border-radius: 10em;
+                    object-fit: contain;
+
+                    @media ( min-width: map-get($grid-breakpoints, xl) ){
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+            
+
+            .burger-btn{
+                width: 2.5em;
+                height: 2.5em;
+                background-color: $gris;
+                border-radius: 50%;
+                font-size: 20px;
+                border: none;
+
+                &:after, &:before {
+                    content: "";
+                    margin: 0 auto;
+                }
+
+                span{
+                    margin: 0.25em auto;
+                    -webkit-animation: outM .6s backwards;
+                    animation: outM .6s backwards;
+                    animation-direction: reverse;
+                }
+
+                &::before{
+                    -webkit-animation: outT .6s backwards;
+                    animation: outT .6s backwards;
+                    animation-direction: reverse;
+                }
+                
+                &::after{
+                    -webkit-animation: outBtm .6s backwards;
+                    animation: outBtm .6s backwards;
+                    animation-direction: reverse;
+                }
+
+                &:after, &:before, span {
+                    display: block;
+                    width: 1em;
+                    height: 0.1em;
+                    background-color: #fff;
+                    border-radius: 0.1em;
+                }
+
+                @media ( min-width: map-get($grid-breakpoints, xl) ) {
+                    display: none;
+                }
+            }
+
+        }
+
+        .menu__liens{
+            margin-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+                margin-top: 0;
+                padding-bottom: 0;
+                flex-direction: row;
+            }
+
+            a {
+                color: $black;
+                text-decoration: none;
+                font-size: 20px;
+                text-align: center;
+                padding: 10px;
+
+                @media (min-width: map-get($grid-breakpoints, xl)) {
+                    &:nth-child(1){
+                        padding-left: 50px;
+                        text-align: left;
+                    }
+                }
+
+                &:hover{
+                    color: $beige_fonce;
+                }
+            }
+
+            &_right{
+                display: flex;
+                flex-direction: column;
+
+                @media (min-width: map-get($grid-breakpoints, xl)) {
+                    flex-direction: row;
+                    a{
+                        padding-right: 50px;
+                    }
+                }
+                
+            }
+        }
+        
+        
+
+        &.active{
+            max-height: 350px;
+            .burger-btn{
+                &::before{
+                    -webkit-animation: inT .6s forwards;
+                    animation: inT .6s forwards;
+                }
+                span{
+                    -webkit-animation: inM .6s forwards;
+                    animation: inM .6s forwards;
+                }
+                &::after{
+                    -webkit-animation: inBtm .6s forwards;
+                    animation: inBtm .6s forwards;
+                }
+            }
+        }
+    }
+
+    
+
+}

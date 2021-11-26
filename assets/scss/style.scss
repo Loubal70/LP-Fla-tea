@@ -1,0 +1,92 @@
+/*
+ * Project Name : Fla'tea
+ * Description: Projet infographie LP Créaweb 2021-2022 - Créer une maquette et la développer
+ * Author: Louis Boulanger & Hervelyne Vasse
+ * Version: 1.0
+*/
+
+// Colors
+
+$gris: #5D565C;
+$gris_clair: #8C8C8C;
+$black: #23001E;
+$white: #ffffff;
+
+$beige_fonce: #CF9895;
+$beige_clair: #F1E7E5;
+$beige_clairr: #FAF0EC;
+
+$vert_foncee: #0B4628;
+$vert_fonce: #71867F;
+$vert_clair: #D0EFB4;
+
+// Breakpoints
+
+$grid-breakpoints: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1400px
+);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+@import 'font.scss';
+@import 'animations.scss';
+
+body{
+    font-family: 'Comfortaa_regular';
+    background-color: $vert_fonce;
+    color: $black;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.title-2{
+    font-size: 25px;
+    line-height: 35px;
+    color: $vert_foncee;
+    margin-bottom: 65px;
+    text-align: center;
+
+    @media (min-width: map-get($grid-breakpoints, lg)) {
+        text-align: left;
+        font-size: 30px;
+    }
+    strong{
+        display: block;
+        font-size: 22px;
+        color: $beige_fonce
+    }
+}
+
+// Sections
+    @import 'sections/menu.scss';
+    @import 'sections/banner.scss';
+    @import 'sections/engagements.scss';
+    @import 'sections/cards.scss';
+    @import 'sections/tuto.scss';
+    @import 'sections/testimonials.scss';
+    @import 'sections/footer.scss';
+
+
+@import 'responsive.scss';

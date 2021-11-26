@@ -1,0 +1,232 @@
+/*
+
+    Position : Header
+    Utilities : Mobile button navbar
+
+*/
+
+@-webkit-keyframes inM {
+    50% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(45deg)
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(.35em) rotate(135deg)
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(.35em) rotate(135deg)
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(.35em) rotate(135deg)
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(.35em) rotate(135deg)
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(-.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(-.35em) rotate(135deg)
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(-.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(-.35em) rotate(135deg)
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(-.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(-.35em) rotate(135deg)
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+
+    50% {
+        transform: translateY(-.35em) rotate(0deg)
+    }
+
+    to {
+        transform: translateY(-.35em) rotate(135deg)
+    }
+}
+
+/*
+
+    Position : Header
+    Utilities : Mouse moving svg
+
+*/
+
+
+@-webkit-keyframes slidein { 
+    0% { 
+        transform: translateY(0);
+    } 
+    
+    50% { 
+        transform: translateY(-20px);
+    }
+    
+    100% { 
+        transform: translateY(0);
+    } 
+}
+@keyframes slidein {
+    0% { 
+        transform: translateY(0);
+    } 
+    
+    50% { 
+        transform: translateY(-10px);
+    }
+    
+    100% { 
+        transform: translateY(0);
+    } 
+}
+
+/*
+
+    Position : tuto'section
+    Utilities : Vapor for cup of tea
+
+*/
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(-100px) scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-300px) scaleX(10);
+    }
+}
+
+/*
+
+    Position    : testimonials'section
+    Utilities   : Rotate around picture
+
+*/
+
+@keyframes rotate {
+    100%{
+        transform: translate(-50%, -50%) rotateZ(359deg);
+    }
+}

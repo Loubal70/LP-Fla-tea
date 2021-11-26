@@ -1,0 +1,121 @@
+.tuto{
+    background-color: $vert_foncee;
+    color: $white;
+
+    &__content{
+        padding: 15px;
+        display: flex;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+            padding: 150px 50px;
+        }
+        @media (min-width: map-get($grid-breakpoints, xxl)) {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .left-side{
+            position: relative;
+
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+                flex-basis: 40%;
+            }
+
+            &__title{
+                font-size: 2rem;
+                line-height: initial;
+                font-weight: normal;
+                margin: 0 0 25px;
+                text-align: center;
+
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    text-align: left;
+                    font-size: 53px;
+                    line-height: 73px;
+                }
+            }
+            &__quote{
+                display: none;
+                @media (min-width: map-get($grid-breakpoints, md)) {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: -5rem;
+                }
+            }
+            &__paragraphe{
+                font-size: 18px;
+                line-height: 22px;
+            }
+            &__list{
+                margin-top: 30px;
+
+                li{
+                    font-size: 18px;
+                    margin-left: 45px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .right-side{
+            display: none;
+
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                position: relative;
+                display: block;
+                flex-basis: 60%;
+                text-align: right;
+            }
+            
+
+            .vapour{
+                position: absolute;
+                top: -7rem;
+                right: 15%;
+                display: flex;
+                justify-content: end;
+                z-index: 1;
+                // padding-right: 15px;
+                
+                // @media (min-width: map-get($grid-breakpoints, lg)) {
+                //     padding-right: 3rem;
+                // }
+
+                // @media (min-width: map-get($grid-breakpoints, xl)) {
+                //     padding-right: 8rem;
+                // }
+
+                span{
+                    position: relative;
+                    right: 20px;
+                    bottom: 0px;
+                    display: block;
+                    min-width: 8px;
+                    height: 120px;
+                    background: $white;
+                    border-radius: 50%;
+                    opacity: 0;
+                    filter: blur(8px);
+                    animation: animate 5s linear infinite;
+                    animation-delay: calc(var(--i) * -0.5s);
+
+                    @media (min-width: map-get($grid-breakpoints, lg)) {
+                        margin: 0 2px 0px;
+                    }
+                }
+            }
+
+            img{
+                max-width: 90%;
+            }
+        }
+
+
+    }
+    
+}
