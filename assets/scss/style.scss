@@ -49,6 +49,7 @@ body{
     background-color: $vert_fonce;
     color: $black;
     user-select: none;
+    overflow-x: hidden;
 }
 
 .container{

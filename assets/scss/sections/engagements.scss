@@ -15,6 +15,8 @@
 
         &__item{
             transition: filter .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            margin-bottom: 30px;
+            
             @media (min-width: map-get($grid-breakpoints, md)) {
                 margin-bottom: 50px;
             }
